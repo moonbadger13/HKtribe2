@@ -1,54 +1,47 @@
-// File: hkt_website/js/scripts.js
-document.addEventListener('DOMContentLoaded', function() { 
-    var nightlifeMap = L.map('map-nightlife').setView([22.2820, 114.1585], 13);
-    var essentialsMap = L.map('map-essentials').setView([22.3193, 114.1694], 13);
-
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize the maps
+    var mapNightlife = L.map('map-nightlife').setView([22.3193, 114.1694], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(nightlifeMap);
+    }).addTo(mapNightlife);
 
+    var mapEssentials = L.map('map-essentials').setView([22.3193, 114.1694], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(essentialsMap);
+    }).addTo(mapEssentials);
 
-    var nightlifeLocations = [
-        {lat: 22.2819, lng: 114.1585, title: 'Club XYZ'},
-        {lat: 22.2783, lng: 114.1825, title: 'Nightclub ABC'},
-        {lat: 22.2820, lng: 114.1545, title: 'Bar 123'}
-    ];
-
-    var essentialsLocations = [
-        {lat: 22.3193, lng: 114.1694, title: 'MTR Station'},
-        {lat: 22.3356, lng: 114.1758, title: 'Public Hospital'},
-        {lat: 22.2842, lng: 114.1491, title: 'International School'}
-    ];
-
-    nightlifeLocations.forEach(function(location) {
-        L.marker([location.lat, location.lng]).addTo(nightlifeMap)
-            .bindPopup(location.title);
+    // Search functionality
+    document.getElementById('search-input').addEventListener('input', function (event) {
+        var searchTerm = event.target.value.toLowerCase();
+        var sections = document.querySelectorAll('main > section');
+        sections.forEach(function (section) {
+            if (section.innerText.toLowerCase().includes(searchTerm) || searchTerm === '') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
     });
 
-    essentialsLocations.forEach(function(location) {
-        L.marker([location.lat, location.lng]).addTo(essentialsMap)
-            .bindPopup(location.title);
-    });
-});
+    // Form submission
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('Thank you for your message!');
-});
-
-document.getElementById('search-input').addEventListener('input', function(event) {
-    var query = event.target.value.toLowerCase();
-    var sections = document.querySelectorAll('main section');
-
-    sections.forEach(function(section) {
-        var text = section.innerText.toLowerCase();
-        if (text.includes(query)) {
-            section.style.display = 'block';
+        if (name && email && message) {
+            alert('Thank you, ' + name + '! Your message has been sent.');
+            document.getElementById('contact-form').reset();
         } else {
-            section.style.display = 'none';
+            alert('Please fill out all fields.');
         }
+    });
+
+    // Mobile menu toggle
+    var menuToggle = document.getElementById('menu-toggle');
+    var navMenu = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('open');
     });
 });
