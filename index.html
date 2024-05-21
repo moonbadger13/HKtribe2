@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HKtribe - Welcome to Hong Kong</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/leaflet.css" />
-    <script src="js/leaflet.js"></script>
+    <title>HKtribe - Explore Hong Kong</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <h1>HKtribe</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#government-services">Government Services</a></li>
                 <li><a href="#nightlife">Nightlife</a></li>
-                <li><a href="#culture">Culture</a></li>
                 <li><a href="#essentials">Essentials</a></li>
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -29,46 +28,22 @@
         <section id="home" class="hero">
             <div class="content">
                 <h1>Welcome to HKtribe</h1>
-                <p>Your ultimate guide for navigating life in Hong Kong.</p>
+                <p>Your Ultimate Guide to Exploring Hong Kong</p>
             </div>
         </section>
-        <section id="government-services">
-            <h2>Government Services</h2>
-            <ul>
-                <li><a href="https://www.gov.hk/" target="_blank">Hong Kong Government Portal</a></li>
-                <li><a href="https://www.immd.gov.hk/" target="_blank">Immigration Department</a></li>
-                <li><a href="https://www.housingauthority.gov.hk/" target="_blank">Housing Authority</a></li>
-                <li><a href="https://www.police.gov.hk/" target="_blank">Hong Kong Police Force</a></li>
-                <li><a href="https://www.customs.gov.hk/" target="_blank">Hong Kong Customs and Excise Department</a></li>
-            </ul>
-        </section>
         <section id="nightlife">
-            <h2>Best Nightclubs</h2>
-            <ul>
-                <li>Club XYZ: Known for its vibrant atmosphere and international DJs.</li>
-                <li>Nightclub ABC: A popular spot with themed nights and live performances.</li>
-                <li>Bar 123: Offers a cozy setting with a great selection of cocktails.</li>
-            </ul>
+            <h2>Nightlife</h2>
+            <p>Discover the best places to enjoy Hong Kong's vibrant nightlife.</p>
             <div id="map-nightlife"></div>
-        </section>
-        <section id="culture">
-            <h2>Culture</h2>
-            <p>Hong Kong has a rich and diverse culture, blending traditional Chinese heritage with modern influences. Some key cultural aspects include:</p>
-            <ul>
-                <li>Festivals: Chinese New Year, Mid-Autumn Festival, Dragon Boat Festival.</li>
-                <li>Food: Dim sum, street food, fusion cuisine.</li>
-                <li>Arts: Cantonese opera, contemporary art galleries, traditional crafts.</li>
-                <li>Landmarks: Victoria Harbour, The Peak, Tian Tan Buddha.</li>
-            </ul>
         </section>
         <section id="essentials">
             <h2>Essentials</h2>
-            <p>Basic information for living in Hong Kong:</p>
+            <p>Everything you need to know for a seamless experience in Hong Kong.</p>
             <ul>
-                <li>Transportation: Efficient public transport system including MTR, buses, and ferries.</li>
-                <li>Healthcare: High-quality public and private healthcare facilities.</li>
-                <li>Education: Numerous international schools and higher education institutions.</li>
-                <li>Accommodation: Variety of housing options from serviced apartments to local flats.</li>
+                <li>Transportation</li>
+                <li>Accommodation</li>
+                <li>Food and Beverage</li>
+                <li>Shopping</li>
             </ul>
             <div id="map-essentials"></div>
         </section>
@@ -76,12 +51,13 @@
             <h2>Reviews</h2>
             <div id="reviews-container">
                 <div class="review">
-                    <p><strong>John Doe:</strong> Amazing experience at Club XYZ!</p>
-                    <p>Rating: ★★★★★</p>
+                    <p><strong>John Doe:</strong> Loved the nightlife in Lan Kwai Fong!</p>
+                    <p>Rating: ★★★★☆</p>
                 </div>
                 <div class="review">
-                    <p><strong>Jane Smith:</strong> Loved the food at the night market!</p>
-                    <p>Rating: ★★★★☆</</div>
+                    <p><strong>Jane Smith:</strong> The shopping experience was incredible.</p>
+                    <p>Rating: ★★★★★</p>
+                </div>
                 <div class="review">
                     <p><strong>Michael Lee:</strong> Great cultural experience at the Cantonese opera.</p>
                     <p>Rating: ★★★★★</p>
@@ -92,7 +68,7 @@
             <h2>Contact</h2>
             <form id="contact-form">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required pattern="[A-Za-z\s]{1,}">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 <label for="message">Message:</label>
@@ -104,5 +80,6 @@
     <footer>
         <p>&copy; 2024 HKtribe. All rights reserved.</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
