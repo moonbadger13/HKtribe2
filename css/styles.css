@@ -1,18 +1,12 @@
-/* File: hkt_website/css/styles.css */
-
-/* Reset and base styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f0f0f0;
-    color: #333;
 }
 
-/* Header styles */
 header {
-    background: #1a237e;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
     color: #fff;
     padding: 1rem 0;
     transition: background 0.3s ease;
@@ -28,7 +22,6 @@ header nav ul li a:hover {
     color: #ffc107;
 }
 
-/* Search bar styles */
 #search-bar {
     margin-top: 10px;
     text-align: center;
@@ -38,32 +31,45 @@ header nav ul li a:hover {
     width: 80%;
     padding: 10px;
     font-size: 16px;
-    border: none;
-    border-bottom: 2px solid #1a237e;
-    background-color: transparent;
-    color: #333;
-    transition: border-color 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-#search-input:focus {
-    outline: none;
-    border-color: #ffc107;
-}
-
-/* Main content styles */
 main {
     padding: 1rem;
 }
 
 section {
     margin-bottom: 2rem;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
+    position: relative;
 }
 
-/* Form styles */
+section h2 {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4e54c8;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+section p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#map-nightlife,
+#map-essentials {
+    width: 50%;
+    height: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -76,7 +82,7 @@ form label, form input, form textarea {
 form button {
     width: 100px;
     padding: 0.5rem;
-    background: #1a237e;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -85,12 +91,11 @@ form button {
 }
 
 form button:hover {
-    background: #ffc107;
+    background: linear-gradient(135deg, #8f94fb, #4e54c8);
 }
 
-/* Footer styles */
 footer {
-    background: #1a237e;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
     color: #fff;
     text-align: center;
     padding: 1rem 0;
