@@ -6,11 +6,13 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 /* Header styles */
 header {
-    background: linear-gradient(135deg, #1a237e, #3949ab);
+    background: #1a237e;
     color: #fff;
     padding: 1rem 0;
     transition: background 0.3s ease;
@@ -36,8 +38,16 @@ header nav ul li a:hover {
     width: 80%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #1a237e;
+    background-color: transparent;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #ffc107;
 }
 
 /* Main content styles */
@@ -47,6 +57,10 @@ main {
 
 section {
     margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
 }
 
 /* Form styles */
@@ -62,7 +76,7 @@ form label, form input, form textarea {
 form button {
     width: 100px;
     padding: 0.5rem;
-    background: linear-gradient(135deg, #1a237e, #3949ab);
+    background: #1a237e;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -71,12 +85,12 @@ form button {
 }
 
 form button:hover {
-    background: linear-gradient(135deg, #3949ab, #1a237e);
+    background: #ffc107;
 }
 
 /* Footer styles */
 footer {
-    background: linear-gradient(135deg, #1a237e, #3949ab);
+    background: #1a237e;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
