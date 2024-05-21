@@ -1,3 +1,6 @@
+/* File: hkt_website/css/styles.css */
+
+/* Reset and base styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -5,8 +8,9 @@ body {
     line-height: 1.6;
 }
 
+/* Header styles */
 header {
-    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    background: linear-gradient(135deg, #1a237e, #3949ab);
     color: #fff;
     padding: 1rem 0;
     transition: background 0.3s ease;
@@ -22,6 +26,7 @@ header nav ul li a:hover {
     color: #ffc107;
 }
 
+/* Search bar styles */
 #search-bar {
     margin-top: 10px;
     text-align: center;
@@ -35,6 +40,7 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Main content styles */
 main {
     padding: 1rem;
 }
@@ -43,6 +49,7 @@ section {
     margin-bottom: 2rem;
 }
 
+/* Form styles */
 form {
     display: flex;
     flex-direction: column;
@@ -55,7 +62,7 @@ form label, form input, form textarea {
 form button {
     width: 100px;
     padding: 0.5rem;
-    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    background: linear-gradient(135deg, #1a237e, #3949ab);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -64,11 +71,12 @@ form button {
 }
 
 form button:hover {
-    background: linear-gradient(135deg, #8f94fb, #4e54c8);
+    background: linear-gradient(135deg, #3949ab, #1a237e);
 }
 
+/* Footer styles */
 footer {
-    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    background: linear-gradient(135deg, #1a237e, #3949ab);
     color: #fff;
     text-align: center;
     padding: 1rem 0;
